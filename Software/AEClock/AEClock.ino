@@ -1,7 +1,5 @@
-
 /**
-   ACS-85-0020
-   ATTiny85  LFO Squarewave with adjustable duty cycle
+   Code is based on the work of Rob Stave (Rob the fiddler) ccby 2015
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input 0 freq 1
@@ -11,23 +9,9 @@
    External pin 6 (PB1) = output 1 !output
    External pin 7 (PB2) = output 2 1/2 freq
    External pin 8       = Vcc
-
-   V 1.0  -  First Version
-
-   Rob Stave (Rob the fiddler) ccby 2015
 */
 
-//  ATTiny overview
-//                      +-\/-+
-//               Reset 1|    |8  VCC
-// (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) .5 freq
-// (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
-//                 GND 4|    |5  PB0 (pin0) out 0
-//                      ------
-
-//Ranges for the pot.  Technically a small number means a
-//shorter timer so low or high...whatever you want to call it.
-
+//range of the pots
 #define VCO1_L1_HIGH 1
 #define VCO1_L1_LOW 1000
 
